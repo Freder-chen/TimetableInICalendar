@@ -25,20 +25,20 @@ def timetable(maxWeek, classTime, starterDay, classes, oneClassTime=45):
             starterDay = starterDay + timedelta(days = 1)
         weeks.append(singleWeek)
 
-    iCalHeader = """BEGIN:VCALENDAR
-        METHOD:PUBLISH
-        VERSION:2.0
-        X-WR-CALNAME:课表
-        PRODID:-//Apple Inc.//Mac OS X 10.15.6//EN
-        X-WR-TIMEZONE:Asia/Shanghai
-        CALSCALE:GREGORIAN
-        BEGIN:VTIMEZONE
-        TZID:Asia/Shanghai
-        END:VTIMEZONE"""
+    iCalHeader = 'BEGIN:VCALENDAR\n' \
+        + 'METHOD:PUBLISH\n' \
+        + 'VERSION:2.0\n' \
+        + 'X-WR-CALNAME:课表\n' \
+        + 'PRODID:-//Apple Inc.//Mac OS X 10.15.6//EN\n' \
+        + 'X-WR-TIMEZONE:Asia/Shanghai\n' \
+        + 'CALSCALE:GREGORIAN\n' \
+        + 'BEGIN:VTIMEZONE\n' \
+        + 'TZID:Asia/Shanghai\n' \
+        + 'END:VTIMEZONE\n'
 
     createNow = datetime.now() - timedelta(hours = 8)
     
-    allvEvent = ''
+    allvEvent = ""
     for Class in classes:
         [Name, Teacher, Location, classWeek, classWeekday, classOrder] = Class[:]
         Title = Name + "@" + Location
@@ -56,7 +56,6 @@ def timetable(maxWeek, classTime, starterDay, classes, oneClassTime=45):
             vEvent += "\nEND:VEVENT"
             allvEvent += vEvent
     allvEvent += "\nEND:VCALENDAR"
-
     return iCalHeader + allvEvent
 
 
@@ -72,10 +71,12 @@ def main():
         ['数据科学1班', '张兴兰/陆艳军', '5-508', rgWeek(12, 19), 2, [5, 6]],
         ['算法设计与分析1班', '陈媛', '5-508', rgWeek(4, 10), 2, [7, 8]],
         ['算法设计与分析1班', '陈媛', '5-508', rgWeek(12, 16), 2, [7, 8]],
-        ['综合英语10班', '彭静', '1-603', rgWeek(4, 10), 3, [3, 4]],
-        ['综合英语10班', '彭静', '1-603', rgWeek(12, 16), 3, [3, 4]],
-        ['算法设计与分析1班', '陈媛', '5-508', rgWeek(4, 10), 3, [7, 8]],
-        ['算法设计与分析1班', '陈媛', '5-508', rgWeek(12, 16), 3, [7, 8]],
+        ['综合英语10班', '彭静', '4-512', rgWeek(4, 10), 3, [3, 4]],
+        ['综合英语10班', '彭静', '4-512', rgWeek(12, 13), 3, [3, 4]],
+        ['综合英语10班', '彭静', '1-603', rgWeek(14, 16), 3, [3, 4]],
+        ['算法设计与分析1班', '陈媛', '5-508', rgWeek(4, 7), 3, [7, 8]],
+        ['算法设计与分析1班', '陈媛', '4-314', rgWeek(8, 10), 3, [7, 8]],
+        ['算法设计与分析1班', '陈媛', '4-314', rgWeek(12, 16), 3, [7, 8]],
         ['数据科学1班', '张兴兰/陆艳军', '4-310', rgWeek(12, 19), 4, [1, 2]],
         ['计算智能及应用1班', '石美凤', '5-508', rgWeek(6, 10), 4, [1, 2]],
         ['高等工程数学1班', '许安见/谢挺', '5-509', rgWeek(7, 10), 4, [3, 4]],

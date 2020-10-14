@@ -35,7 +35,7 @@
 
 ### [Mac导入日历(推荐)](https://support.apple.com/zh-cn/guide/calendar/icl1023/mac)
 
-1. 在 Mac 上的“日历” App <img src="https://help.apple.com/assets/5E1912A2094622D13119F732/5E1912A5094622D13119F739/zh_CN/4f2c844f7eff8d8e1fdbd8ea562db18d.png" alt="img" style="zoom:25%;" /> 中，为日程[创建新日历](https://support.apple.com/zh-cn/guide/calendar/icl1005/11.0/mac/10.15)（如有需要）。
+1. 在 Mac 上的“日历” App中，为日程[创建新日历](https://support.apple.com/zh-cn/guide/calendar/icl1005/11.0/mac/10.15)（如有需要）。
 2. 选取“文件”>“导入”。
 3. 选择带有日程的文件，然后点按“导入”。
 4. 选择日历来添加日程。
@@ -46,7 +46,7 @@
 
 ### [IOS导入日历](https://support.apple.com/zh-cn/guide/iphone/ipha0d932e96/ios)
 
-1. 前往“设置”<img src="https://help.apple.com/assets/5EB05D710946221361B50B6B/5EB05D7C0946221361B50BAA/zh_CN/492fec5aff74dbdef9b526177c3804b4.png" alt="img" style="zoom:25%;" /> >“日历">“帐户">“添加帐户”。
+1. 前往“设置” >“日历">“帐户">“添加帐户”。
 2. 轻点“其他”，然后执行以下任一项操作：
     - *订阅 iCal (.ics) 日历：*轻点“添加已订阅的日历”，然后输入订阅的 .ics 文件的 URL；或导入来自“邮件”的 .ics 文件。
 
@@ -54,3 +54,6 @@
 
 [@junyilou](https://github.com/junyilou)
 
+### 项目地址
+
+[TimetableInICalendar](https://github.com/Freder-chen/TimetableInICalendar)
